@@ -4,11 +4,11 @@ class Solution {
 
   findDiff(str1, str2) {
     if (typeof str1 !== 'string' || typeof str2 !== 'string') {
-      throw TypeError('str1 or str2 is not of type string.');
+      throw new TypeError('str1 or str2 is not of type string.');
     }
     const seen = {};
     str1.split('').forEach((char) => {
-      if (seen[char]) {
+      if (char in seen) {
         seen[char] += 1;
       } else {
         seen[char] = 1;
@@ -17,7 +17,7 @@ class Solution {
     const chars = str2.split('');
     const len = chars.length;
     for (let i = 0; i < len; i++) {
-      if (seen[chars[i]]) {
+      if (chars[i] in seen) {
         seen[chars[i]] -= 1;
       } else {
         return chars[i];
