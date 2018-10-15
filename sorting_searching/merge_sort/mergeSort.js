@@ -15,7 +15,7 @@ class MergeSort {
     }
     const mid = Math.floor(data.length / 2);
     let left = data.slice(0, mid);
-    let right = data.slice(mid, data.length);
+    let right = data.slice(mid);
     left = this._sort(left);
     right = this._sort(right);
     return this._merge(left, right);
