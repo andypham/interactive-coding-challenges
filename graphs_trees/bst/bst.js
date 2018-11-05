@@ -94,10 +94,16 @@ class TestBst {
     console.log('Success: testTree2');
   }
 }
-
 function main() {
   const test = new TestBst();
   test.testTree1();
   test.testTree2();
 }
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  Bst,
+  Node
+};
