@@ -122,5 +122,6 @@ function main() {
 main();
 
 module.exports = {
-  Graph
+  Graph,
+  STATE
 };
