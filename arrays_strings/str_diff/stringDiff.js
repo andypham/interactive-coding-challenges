@@ -23,7 +23,7 @@ class Solution {
         return chars[i];
       }
       if (seen[chars[i]] < 0) {
-        return chars[i]
+        return chars[i];
       }
     }
     return null;
